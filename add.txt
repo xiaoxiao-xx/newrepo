@@ -1,3 +1,4 @@
 git remote add origin https://github.com/xiaoxiao-xx/newrepo.git
 #创建分支并指向
 git checkout -b dev
+#切换分支
