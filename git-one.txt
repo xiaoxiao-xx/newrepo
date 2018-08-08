@@ -1,2 +1,2 @@
 study git 
-hello git
+git is a free software.
