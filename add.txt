@@ -1,1 +1,2 @@
-idadadad
+git remote add origin https://github.com/xiaoxiao-xx/newrepo.git 
+
