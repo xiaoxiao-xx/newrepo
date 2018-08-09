@@ -11,7 +11,6 @@ git checkout -b dev
 +++++++++++++++++++++++++++++++++++++++++++++++
 #切换分支
 git checkout master
-<<<<<<< HEAD
 +++++++++++++++++++++++++++++++++++++++++++++++
 #分支管理策略
 +++++++++++++++++++++++++++++++++++++++++++++++
@@ -29,7 +28,6 @@ git branch -D branch-name
 git pull
 #建立本地分支与远程的连接
 git branch --set-upstream-to=origin/<branch> dev
-git pull
 #建立本地分支与远程的连接
 git branch --set-upstream-to=origin/<branch> dev
 +++++++++++++++++++++++++++++++++++++++++++++++
