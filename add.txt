@@ -1,7 +1,13 @@
+#创建Github远程仓库
 git remote add origin https://github.com/xiaoxiao-xx/newrepo.git
+
 #创建分支并指向
 git checkout -b dev
+
 #切换分支
 git checkout master
+
 #分支管理策略
-...
+
+#保存工作现场
+git stash
