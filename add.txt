@@ -1,0 +1,47 @@
++++++++++++++++++++++++++++++++++++++++++++++++
+#创建Github远程仓库
+git remote add origin https://github.com/xiaoxiao-xx/newrepo.git
+#删除远程库
+git remote rm origin
+#查看远程库信息
+git remote    git remote -v #更详细
++++++++++++++++++++++++++++++++++++++++++++++++
+#创建分支并指向
+git checkout -b dev
++++++++++++++++++++++++++++++++++++++++++++++++
+#切换分支
+git checkout master
++++++++++++++++++++++++++++++++++++++++++++++++
+#分支管理策略
++++++++++++++++++++++++++++++++++++++++++++++++
+#保存工作现场
+git stash
+#获取现场列表
+git stash list
+#恢复工作现场
+git stash apply #恢复不删除列表
+git stash pop   #恢复并删除列表
++++++++++++++++++++++++++++++++++++++++++++++++
+#强行删除新的分支
+git branch -D branch-name
+#抓取远程库的分支
+git pull
+#建立本地分支与远程的连接
+git branch --set-upstream-to=origin/<branch> dev
+git pull
+#建立本地分支与远程的连接
+git branch --set-upstream-to=origin/<branch> dev
++++++++++++++++++++++++++++++++++++++++++++++++
+#多人协作
+#推送分支
+1.master分支是主分支，因此要时刻与远程同步；
+2.dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
+3.bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
+4.feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+all.总之，就是在Git中，分支完全可以在本地自己藏着玩，是否推送，视你的心情而定！
+git push origin branch-name
++++++++++++++++++++++++++++++++++++++++++++++++
+#创建远程dev分支到本地
+git checkout -b dev origin/dev
++++++++++++++++++++++++++++++++++++++++++++++++
+
