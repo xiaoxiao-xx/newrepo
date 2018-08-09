@@ -45,3 +45,15 @@ git checkout -b dev origin/dev
 #rebase操作可以把本地未push的分叉提交历史整理成直线；
 #rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比
 git rebase
++++++++++++++++++++++++++++++++++++++++++++++++
+#标签管理
++++++++++++++++++++++++++++++++++++++++++++++++
+#创建标签
+git tag v0.1
+#带说明的标签
+git tag v0.3 -m "version v0.3"
+#具体commit版本的标签
+git tag v0.2 <commit-id>
+#查看标签
+git show <tag-name>
+
