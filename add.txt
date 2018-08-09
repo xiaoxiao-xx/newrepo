@@ -79,3 +79,7 @@ git config --global color.ui true
 git add -f <file-name>
 #查看具体忽略原因
 git check-ignore -v <file-name>
+#配置别名
+git config --global alias.co checkout
+git config --global alias.revoke 'reset HEAD'
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Cre                                                                                                                set -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-com                                                                                                                mit"
