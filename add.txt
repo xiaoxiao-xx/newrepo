@@ -33,6 +33,8 @@ git pull
 git branch --set-upstream-to=origin/<branch> dev
 +++++++++++++++++++++++++++++++++++++++++++++++
 #多人协作
+#查看远程库信息
+git remote    git remote -v #更详细
 #推送分支
 1.master分支是主分支，因此要时刻与远程同步；
 2.dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；
@@ -43,6 +45,28 @@ git push origin branch-name
 +++++++++++++++++++++++++++++++++++++++++++++++
 #创建远程dev分支到本地
 git checkout -b dev origin/dev
++++++++++++++++++++++++++++++++++++++++++++++++
+#rebase操作可以把本地未push的分叉提交历史整理成直线；
+#rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比
+git rebase
++++++++++++++++++++++++++++++++++++++++++++++++
+#标签管理
++++++++++++++++++++++++++++++++++++++++++++++++
+#创建标签
+git tag v0.1
+#带说明的标签
+git tag v0.3 -m "version v0.3"
+#具体commit版本的标签
+git tag v0.2 <commit-id>
+#查看标签
+git show <tag-name>
+#删除本地标签
+git tag -d <tag-name>
+#push标签到远程库
+git push origin <tag-name>
+git push origin tags
+#删除远程库的标签
+git push origin :refs/tags/<tag-name>
 +++++++++++++++++++++++++++++++++++++++++++++++
 #自定义git
 git config --global color.ui true
