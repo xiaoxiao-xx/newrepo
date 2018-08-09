@@ -44,4 +44,5 @@ git push origin branch-name
 #创建远程dev分支到本地
 git checkout -b dev origin/dev
 +++++++++++++++++++++++++++++++++++++++++++++++
-
+#自定义git
+git config --global color.ui true
