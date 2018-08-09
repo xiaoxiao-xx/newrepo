@@ -56,4 +56,10 @@ git tag v0.3 -m "version v0.3"
 git tag v0.2 <commit-id>
 #查看标签
 git show <tag-name>
-
+#删除本地标签
+git tag -d <tag-name>
+#push标签到远程库
+git push origin <tag-name>
+git push origin tags
+#删除远程库的标签
+git push origin :refs/tags/<tag-name>
