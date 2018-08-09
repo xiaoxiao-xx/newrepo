@@ -3,4 +3,5 @@ git remote add origin https://github.com/xiaoxiao-xx/newrepo.git
 git checkout -b dev
 #切换分支
 git checkout master
-#分支管理策略
+#分支管理策略，修复bug
+
