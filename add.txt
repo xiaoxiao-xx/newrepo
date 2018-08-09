@@ -6,6 +6,9 @@ git remote rm origin
 #查看远程库信息
 git remote    git remote -v #更详细
 +++++++++++++++++++++++++++++++++++++++++++++++
+#撤销操作
+git checkout --<file-name> #撤销工作区
+git reset head <file-name> #撤销暂存区
 #创建分支并指向
 git checkout -b dev
 +++++++++++++++++++++++++++++++++++++++++++++++
@@ -69,3 +72,10 @@ git push origin :refs/tags/<tag-name>
 +++++++++++++++++++++++++++++++++++++++++++++++
 #自定义git
 git config --global color.ui true
++++++++++++++++++++++++++++++++++++++++++++++++
+#忽略文件提交
+根目录下创建.gitignore文件填写规则并提交
+#强制提交
+git add -f <file-name>
+#查看具体忽略原因
+git check-ignore -v <file-name>
