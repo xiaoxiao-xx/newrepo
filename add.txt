@@ -1,6 +1,8 @@
 +++++++++++++++++++++++++++++++++++++++++++++++
 #创建Github远程仓库
 git remote add origin https://github.com/xiaoxiao-xx/newrepo.git
+#生成SSH key
+ssh-keygen -t rsa -C "邮箱"
 #删除远程库
 git remote rm origin
 #查看远程库信息
