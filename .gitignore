@@ -1,2 +1,3 @@
-# ignore pp....
+# ignore pp.... 提交忽略匹配规则
 *.pp
+
