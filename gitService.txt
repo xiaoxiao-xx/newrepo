@@ -1,0 +1,22 @@
+#服务器创建用户git
+adduser git
+#/home/git 目录下创建.ssh文件权限至少700 .ssh下创建authorized_keys文件权限至少600
+mkdir .ssh
+touch authorized_keys
+#将他人公钥写入到authorized_keys
+cat id_rsa.pub > authorized_keys
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#初始化一个git仓库(没有工作区) 假定是/usr/local/xx.git 进入/usr/local
+git init --bare xx.git
+#修改拥有者
+chown -R git:git xx.git
+#出于安全，git用户不允许登录 编辑/etc/passwd 
+git:x:1001:1001:,,,:/home/git:/bin/bash 改为
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+#git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出
+#clone
+git clone git@<服务器ip>:xx.git
+#关于password是git用户密码
+#无密码连接 百度 没搞定
+
+
